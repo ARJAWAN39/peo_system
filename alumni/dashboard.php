@@ -1,6 +1,6 @@
 <?php
 require_once "../alumni_check.php";
-require_once "../db.php";
+require_once "../config.php";
 
 include "../layout/alumni/header.php";
 include "../layout/alumni/sidebar.php";

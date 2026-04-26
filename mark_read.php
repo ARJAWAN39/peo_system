@@ -1,5 +1,5 @@
 <?php
-require_once "db.php";
+require_once "config.php";
 
 if (isset($_GET['id'])) {
     $stmt = $pdo->prepare("UPDATE notifications SET is_read = 1 WHERE notification_id = ?");

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "db.php";
+require_once "config.php";
 include "layout/header.php";
 include "layout/sidebar.php";
 

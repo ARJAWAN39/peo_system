@@ -6,7 +6,7 @@
  */
 
 require_once "../init.php";
-require_once "../db.php";
+require_once "../config.php";
 
 /* ================================
    1. LOGIN CHECK

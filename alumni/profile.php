@@ -1,6 +1,6 @@
 <?php
 require_once "../alumni_check.php";
-require_once "../db.php";
+require_once "../config.php";
 
 $email = $_SESSION['email'];
 

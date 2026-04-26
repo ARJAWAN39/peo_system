@@ -8,10 +8,10 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 /* ================= DATABASE CONNECTION ================= */
-require_once __DIR__ . '/db.php';
+require_once __DIR__ . '/config.php';
 
 if (!isset($pdo)) {
-    die("PDO connection not available. Check db.php");
+    die("PDO connection not available. Check config.php");
 }
 
 /* ================= FILTER VALUES ================= */
