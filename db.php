@@ -22,9 +22,12 @@ if ($db_url) {
     $port = '3306';
 }
 
-$conn = new mysqli($host, $user, $pass, $db, $port);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+// Replace your old $conn line with this PDO setup:
+try {
+    $pdo = new PDO("mysql:host=$host;port=$port;dbname=$db", $user, $pass);
+    // This tells PHP to show an error if the SQL is wrong
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Connection failed: " . $e->getMessage());
 }
 ?>
