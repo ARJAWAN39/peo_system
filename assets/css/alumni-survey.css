@@ -1,0 +1,616 @@
+/* =========================
+   SURVEY PAGE SCOPE
+========================= */
+.survey-page {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* =========================
+   SURVEY TOP BAR
+========================= */
+.survey-page .survey-topbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.survey-page .back-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: #4f46e5;
+    text-decoration: none;
+}
+
+.survey-page .back-link:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   PROGRESS
+========================= */
+.survey-page .survey-progress {
+    margin: 20px 0 26px;
+}
+
+.survey-page .progress-bar {
+    width: 100%;
+    height: 6px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 6px 0;
+}
+
+.survey-page .progress-fill {
+    height: 100%;
+    background: #4f46e5;
+    border-radius: 10px;
+}
+
+/* =========================
+   SURVEY FORM LAYOUT
+========================= */
+.survey-page .survey-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =========================
+   QUESTION CARD
+========================= */
+.survey-page .survey-card-modern {
+    width: 720px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 1;
+}
+
+.survey-page .survey-card-body {
+    padding: 32px;
+}
+
+/* =========================
+   QUESTION
+========================= */
+.survey-page .survey-question-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+/* =========================
+   INPUT
+========================= */
+.survey-page .survey-input {
+    width: 100%;
+    min-height: 140px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    padding: 14px;
+    font-size: 14px;
+    background: #ffffff;
+}
+
+/* =========================
+   OPTIONS
+========================= */
+.survey-page .survey-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.survey-page .survey-option:hover {
+    background: #f9fafb;
+}
+
+.survey-page .survey-option input {
+    accent-color: #4f46e5;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.survey-page .btn-primary {
+    background: #111827;
+    color: #ffffff;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.survey-page .btn-secondary {
+    background: #ffffff;
+    color: #111827;
+    border: 1px solid #d1d5db;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* ==================================================
+   DROPDOWN STYLE
+================================================== */
+.survey-page select.survey-input {
+    appearance: none;
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    padding: 14px 44px 14px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    min-height: 56px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24'%3E%3Cpath fill='%236b7280' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+}
+
+/* ==================================================
+   LINEAR SCALE – ABSOLUTE ALIGN (FINAL)
+================================================== */
+
+/* Scale radios */
+.survey-page .survey-scale {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 28px;
+    justify-items: center;
+    margin-top: 18px;
+}
+
+/* Each radio */
+.survey-page .survey-scale .survey-option {
+    border: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Radio size */
+.survey-page .survey-scale input[type="radio"] {
+    width: 18px;
+    height: 18px;
+}
+
+/* Number below radio */
+.survey-page .survey-scale .survey-option span {
+    margin-top: 6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* 🔥 LABELS – FULL WIDTH, TRUE LEFT & RIGHT */
+.survey-page .survey-scale-labels {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -28px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #6b7280;
+    pointer-events: none;
+}
+
+.survey-grid {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+.survey-grid th,
+.survey-grid td {
+    padding: 12px;
+    text-align: center;
+}
+
+.survey-grid th {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.grid-row-label {
+    text-align: left;
+    font-weight: 500;
+    color: #111827;
+}
+
+.grid-cell input[type="radio"] {
+    accent-color: #4f46e5;
+}
+
+/* =========================
+   GOOGLE FORM STAR RATING – FINAL POLISH
+========================= */
+
+.survey-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;   /* ✅ center horizontally */
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.survey-rating input {
+    display: none;
+}
+
+.survey-rating label {
+    font-size: 36px;           /* ⭐ bigger stars */
+    color: #d1d5db;            /* grey */
+    cursor: pointer;
+    transition: color 0.2s, transform 0.15s;
+}
+
+/* hover effect */
+.survey-rating label:hover,
+.survey-rating label:hover ~ label {
+    color: #fbbf24;
+    transform: scale(1.1);     /* subtle zoom */
+}
+
+/* selected */
+.survey-rating input:checked ~ label {
+    color: #fbbf24;
+}
+
+/* ===============================
+   SURVEY COMPLETED – FINAL UI
+================================ */
+
+.survey-complete-wrapper {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card */
+.survey-complete-card {
+    background: #e8f3ff;
+    padding: 48px 56px;
+    border-radius: 18px;
+    text-align: center;
+    max-width: 520px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Check icon */
+.survey-complete-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background: #c7e7db;
+    color: #1f8f6a;
+    font-size: 36px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Title */
+.survey-complete-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Text */
+.survey-complete-text {
+    font-size: 15px;
+    color: #374151;
+    margin-bottom: 26px;
+    line-height: 1.6;
+}
+
+/* Button */
+.survey-complete-btn {
+    display: inline-block;
+    background: #3b82f6;
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.survey-complete-btn:hover {
+    background: #2563eb;
+}
+
+/* ===== PROFILE PAGE ===== */
+
+.profile-header {
+    margin-bottom: 25px;
+}
+
+.profile-header h2 {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.profile-header p {
+    color: #6b7280;
+}
+
+/* Layout */
+.profile-container {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 25px;
+}
+
+/* Cards */
+.profile-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.profile-card h4 {
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Avatar */
+.profile-avatar-card {
+    background: #f4e8f5;
+    text-align: center;
+}
+
+.avatar-box {
+    width: 110px;
+    height: 110px;
+    margin: 15px auto;
+    border-radius: 14px;
+    background: #eef2ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.btn-primary {
+    background: #6366f1;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    cursor: not-allowed;
+}
+
+/* Quick Info */
+.quick-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.quick-item span {
+    font-size: 22px;
+}
+
+.quick-item small {
+    color: #6b7280;
+}
+
+.quick-item p {
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Forms */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-group label {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+}
+
+/* Academic Card Accent */
+.academic-card {
+    background: #fffbea;
+    border: 1px solid #fde68a;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .profile-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== EMPLOYMENT SECTION ===== */
+
+.employment-card {
+    background: #f0fdf9;
+    border: 1px solid #99f6e4;
+}
+
+.employment-card h4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.employment-icon {
+    background: #10b981;
+    color: white;
+    padding: 6px 8px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* Select styling */
+.employment-card select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+    color: #6b7280;
+}
+
+.btn-employment {
+    margin-top: 15px;
+    background: #10b981;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;   /* ✅ FIX */
+    opacity: 0.9;
+}
+/* ===== FORCE ENABLE EMPLOYMENT INPUTS (DEMO) ===== */
+
+.employment-card input,
+.employment-card select,
+.employment-card textarea {
+    pointer-events: auto !important;
+    opacity: 1 !important;
+    background: #ffffff !important;
+    cursor: text;
+}
+
+/* ===== HARD FIX: FORCE EMPLOYMENT SECTION INTERACTION ===== */
+
+.employment-card,
+.employment-card *,
+.profile-right,
+.profile-right * {
+    pointer-events: auto !important;
+}
+
+.employment-card {
+    position: relative;
+    z-index: 10;
+}
+
+/* ===== PERSONAL INFO – RED ACCENT ===== */
+
+.personal-accent {
+    background: #ffffff;
+    border-top: 4px solid #ef4444;   /* red accent */
+}
+
+.personal-accent h4 {
+    color: #ef4444;
+    font-weight: 600;
+}
+
+/* Optional subtle hover */
+.personal-accent:hover {
+    box-shadow: 0 10px 25px rgba(239, 68, 68, 0.12);
+}
+
+/* ===== DEMO TOAST ===== */
+
+.demo-toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #10b981;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 9999;
+}
+
+.demo-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== AVATAR IMAGE PREVIEW ===== */
+
+.avatar-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+}
+.sidebar-icon {
+    width: 56px;
+    height: 56px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto 3px 60px; /* ← move left */
+}
+
+.sidebar-icon i {
+    font-size: 28px;
+    color: #fff;
+}
+
+.survey-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 8px;
+}
+
+.survey-rating input {
+    display: none;
+}
+
+.survey-rating label {
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.survey-rating input:checked ~ label {
+    color: gold;
+}
+
+.survey-rating label:hover,
+.survey-rating label:hover ~ label {
+    color: gold;
+}

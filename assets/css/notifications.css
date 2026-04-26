@@ -1,0 +1,535 @@
+
+/* =========================
+   BASE RESET (PAGE ONLY)
+========================= */
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f7fb;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================
+   MAIN CONTENT AREA
+========================= */
+.main-content {
+    padding: 20px 30px;
+    margin-top: 0;
+}
+
+/* =========================
+   PAGE HEADER
+========================= */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* MARK ALL BUTTON */
+.mark-all-btn{
+    background: #4f46e5;   /* ✅ ADD THIS */
+    border: none;          /* optional cleaner */
+    padding:8px 14px;
+    color: white;
+    border-radius:6px;
+    font-size:12px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.mark-all-btn:hover{
+    background:#4338ca;
+}
+
+/* =========================
+   SUMMARY CARDS
+========================= */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 15px 0;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.card strong {
+    font-size: 22px;
+    display: block;
+    margin-top: 6px;
+}
+
+/* =========================
+   FILTER TABS
+========================= */
+.tabs {
+    margin: 15px 0;
+}
+
+.tabs a {
+    padding: 8px 14px;
+    border: 1px solid #111827;
+    text-decoration: none;
+    margin-right: 6px;
+    color: #111827;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.tabs a.active {
+    background: #111827;
+    color: #fff;
+}
+
+/* =========================
+   NOTIFICATION LIST
+========================= */
+.notification {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 14px;
+}
+
+.notification h4 {
+    margin: 0 0 6px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.notification p {
+    margin: 0 0 6px;
+    font-size: 14px;
+}
+
+.notification small {
+    color: #6b7280;
+    font-size: 12px;
+}
+
+/* notification top layout */
+.notif-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.notif-time{
+    font-size:12px;
+    color:#6b7280;
+}
+
+/* unread dot */
+.dot{
+    width:6px;
+    height:6px;
+    background:#111827;
+    display:inline-block;
+    border-radius:50%;
+    margin-left:6px;
+}
+
+/* =========================
+   UNREAD INDICATOR
+========================= */
+.unread {
+    border-left: 4px solid #111827;
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+.actions {
+    margin-top: 10px;
+}
+
+.actions a {
+    border: 1px solid #111827;
+    padding: 6px 12px;
+    text-decoration: none;
+    color: #111827;
+    margin-right: 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.actions a:hover {
+    background: #111827;
+    color: #fff;
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+.no-data {
+    background: #fff;
+    border: 1px dashed #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* =========================
+   GLOBAL
+========================= */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6fb;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.header h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+/* =========================
+   MARK ALL BUTTON
+========================= */
+.mark-all-btn{
+    border: none;
+    padding: 8px 16px;
+    background: #4f46e5;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.mark-all-btn:hover{
+    background:#4338ca;
+}
+
+/* =========================
+   CARDS
+========================= */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin: 20px 0;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.card strong {
+    font-size: 26px;
+    margin-top: 6px;
+    color: #4f46e5;
+}
+
+/* =========================
+   FILTER BUTTONS
+========================= */
+.tabs a {
+    padding: 8px 16px;
+    border: none;
+    text-decoration: none;
+    margin-right: 6px;
+    color: #374151;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    background: #e5e7eb;
+    transition: 0.2s;
+}
+
+.tabs a:hover {
+    background: #d1d5db;
+}
+
+.tabs a.active {
+    background: #111827;
+    color: #fff;
+}
+
+/* =========================
+   NOTIFICATION BOX
+========================= */
+.notification {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    transition: 0.2s;
+}
+
+.notification:hover {
+    transform: translateY(-2px);
+}
+
+/* unread left highlight */
+.unread {
+    border-left: 5px solid #4f46e5;
+}
+
+/* =========================
+   TITLE + TIME
+========================= */
+.notif-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.notification h4 {
+    font-size: 15px;
+    color: #111827;
+}
+
+.notif-time {
+    font-size:12px;
+    color:#6b7280;
+}
+
+/* unread dot */
+.dot{
+    width:6px;
+    height:6px;
+    background:#4f46e5;
+    display:inline-block;
+    border-radius:50%;
+    margin-left:6px;
+}
+
+/* =========================
+   MESSAGE
+========================= */
+.notification p {
+    color:#4b5563;
+    margin-top:5px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.actions a {
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    margin-right: 6px;
+    transition: 0.2s;
+}
+
+/* view button */
+.actions a:first-child {
+    background: #4f46e5;
+    color: white;
+}
+
+.actions a:first-child:hover {
+    background: #4338ca;
+}
+
+/* mark as read */
+.actions a:last-child {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+.actions a:last-child:hover {
+    background: #d1d5db;
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+.no-data {
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    color: #6b7280;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+/* MODAL BACKGROUND */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+/* MODAL BOX */
+.modal-content {
+    background: #fff;
+    margin: 8% auto;
+    padding: 25px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+/* CLOSE BUTTON */
+.close {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* MODAL BACKGROUND */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+/* MODAL BOX */
+.modal-content {
+    background: #fff;
+    margin: 6% auto;
+    padding: 25px;
+    width: 420px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    animation: fadeIn 0.2s ease;
+}
+
+/* HEADER */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* CLOSE BUTTON */
+.close {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* MESSAGE */
+.modal-message {
+    margin: 10px 0 15px;
+    color: #4b5563;
+}
+
+/* DETAILS */
+.modal-details p {
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+/* PROGRESS BAR */
+.progress-section {
+    margin-top: 15px;
+}
+
+.progress-bar {
+    width: 100%;
+    background: #e5e7eb;
+    height: 10px;
+    border-radius: 6px;
+}
+
+.progress-fill {
+    height: 10px;
+    width: 0%;
+    border-radius: 6px;
+    background: #4f46e5;
+    transition: width 0.3s ease;
+}
+
+/* TEXT */
+.progress-text {
+    font-size: 13px;
+    margin-top: 5px;
+    color: #111827;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* TYPE COLORS */
+.notification.pending {
+    border-left: 5px solid #facc15; /* yellow */
+}
+
+.notification.overdue {
+    border-left: 5px solid #ef4444; /* red */
+}
+
+.notification.alert {
+    border-left: 5px solid #f97316; /* orange */
+}
+.badge {
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 6px;
+    margin-left: 8px;
+    color: white;
+}
+
+/* badge colors */
+.badge.pending {
+    background: #facc15;
+    color: #000;
+}
+
+.badge.overdue {
+    background: #ef4444;
+}
+
+.badge.alert {
+    background: #f97316;
+}
