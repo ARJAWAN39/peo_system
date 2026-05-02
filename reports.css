@@ -1,0 +1,475 @@
+/* ===========================
+   REPORTS PAGE - FIGMA REDESIGN
+   =========================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+.reports-wrap {
+    font-family: 'Inter', sans-serif;
+    padding: 2rem 2.5rem;
+    background: #f0f2f5;
+    min-height: 100vh;
+}
+
+/* ===========================
+   REPORT HEADER CARD
+   =========================== */
+.report-header-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 2rem 2.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    border: 1px solid #e8ecf1;
+}
+
+.report-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.report-header-top h1 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #1a1f36;
+    margin: 0 0 0.35rem 0;
+    letter-spacing: -0.02em;
+}
+
+.report-meta {
+    color: #6b7a99;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.btn-generate-pdf {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s;
+    box-shadow: 0 2px 8px rgba(37,99,235,0.18);
+    white-space: nowrap;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-generate-pdf:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(37,99,235,0.28);
+}
+
+.report-divider {
+    border: none;
+    border-top: 1px solid #e8ecf1;
+    margin: 1.25rem 0;
+}
+
+/* ===========================
+   FILTER BAR
+   =========================== */
+.report-filters {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.report-filters .filter-label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #1a1f36;
+}
+
+.report-filters .filter-sublabel {
+    font-size: 0.85rem;
+    color: #6b7a99;
+    font-weight: 500;
+}
+
+.report-filters select {
+    padding: 0.55rem 2rem 0.55rem 0.85rem;
+    border: 1.5px solid #d4dae5;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    color: #1a1f36;
+    background: #fff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    appearance: auto;
+    transition: border-color 0.2s;
+    outline: none;
+}
+
+.report-filters select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.08);
+}
+
+/* ===========================
+   SECTION TITLES
+   =========================== */
+.section-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 2rem 2.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    border: 1px solid #e8ecf1;
+}
+
+.section-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #1a1f36;
+    margin: 0 0 1.5rem 0;
+    letter-spacing: -0.01em;
+}
+
+/* ===========================
+   PEO SUMMARY CARDS (3-col)
+   =========================== */
+.peo-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.peo-summary-card {
+    background: #fff;
+    border: 1px solid #e8ecf1;
+    border-radius: 14px;
+    padding: 1.5rem;
+    position: relative;
+    transition: box-shadow 0.2s;
+}
+
+.peo-summary-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+}
+
+.peo-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.25rem;
+}
+
+.peo-card-header h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1f36;
+    margin: 0;
+}
+
+.peo-card-header .trend-icon {
+    color: #22c55e;
+    font-size: 1.1rem;
+}
+
+.peo-card-header .trend-icon.down {
+    color: #ef4444;
+}
+
+.peo-card-desc {
+    font-size: 0.82rem;
+    color: #6b7a99;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #f0f2f5;
+}
+
+.peo-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.peo-metric-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.88rem;
+}
+
+.peo-metric-row .metric-label {
+    color: #6b7a99;
+    font-weight: 500;
+}
+
+.peo-metric-row .metric-value {
+    font-weight: 700;
+    color: #1a1f36;
+}
+
+.peo-metric-row .metric-value.achievement {
+    font-size: 1.05rem;
+}
+
+.peo-metric-row .metric-value.green { color: #22c55e; }
+.peo-metric-row .metric-value.amber { color: #f59e0b; }
+.peo-metric-row .metric-value.red { color: #ef4444; }
+
+.peo-metric-row .metric-value.trend-up { color: #22c55e; }
+.peo-metric-row .metric-value.trend-down { color: #ef4444; }
+
+.confidence-badge {
+    display: inline-block;
+    padding: 0.15rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.confidence-badge.high {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.confidence-badge.medium {
+    background: #fef9c3;
+    color: #ca8a04;
+}
+
+.confidence-badge.low {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+/* Progress bar */
+.peo-progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e8ecf1;
+    border-radius: 100px;
+    overflow: hidden;
+    margin-top: 0.25rem;
+}
+
+.peo-progress-fill {
+    height: 100%;
+    border-radius: 100px;
+    transition: width 0.6s ease;
+}
+
+.peo-progress-fill.green { background: linear-gradient(90deg, #22c55e, #16a34a); }
+.peo-progress-fill.amber { background: linear-gradient(90deg, #f59e0b, #d97706); }
+.peo-progress-fill.red { background: linear-gradient(90deg, #ef4444, #dc2626); }
+
+/* ===========================
+   CHART GRID (2 columns)
+   =========================== */
+.chart-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.chart-panel {
+    background: #fff;
+    border-radius: 18px;
+    padding: 1.75rem 2rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    border: 1px solid #e8ecf1;
+}
+
+.chart-panel h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1a1f36;
+    margin: 0 0 1.25rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.chart-panel h4 i {
+    font-size: 1rem;
+}
+
+.chart-box-inner {
+    height: 300px;
+    position: relative;
+}
+
+/* ===========================
+   DETAILED PEO CARDS
+   =========================== */
+.peo-detail-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 2rem 2.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    border: 1px solid #e8ecf1;
+}
+
+.peo-detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.peo-detail-header h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1a1f36;
+    margin: 0;
+}
+
+.peo-detail-header .detail-badge {
+    padding: 0.3rem 0.9rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.peo-detail-header .detail-badge.pass {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.peo-detail-header .detail-badge.fail {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.peo-detail-header .detail-badge.warning {
+    background: #fef9c3;
+    color: #ca8a04;
+}
+
+.peo-detail-desc {
+    font-size: 0.9rem;
+    color: #6b7a99;
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+}
+
+.peo-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.peo-detail-section h5 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #6b7a99;
+    margin: 0 0 0.6rem 0;
+}
+
+.plo-tag {
+    display: inline-block;
+    background: #eef2ff;
+    color: #4f46e5;
+    padding: 0.25rem 0.7rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin: 0 0.35rem 0.35rem 0;
+}
+
+.question-item {
+    font-size: 0.82rem;
+    color: #3d4f7c;
+    padding: 0.35rem 0;
+    border-bottom: 1px solid #f0f2f5;
+    line-height: 1.4;
+}
+
+.question-item:last-child {
+    border-bottom: none;
+}
+
+.peo-detail-chart {
+    height: 200px;
+    position: relative;
+}
+
+/* ===========================
+   STATISTICS TABLE
+   =========================== */
+.stats-table-modern {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.stats-table-modern th {
+    text-align: left;
+    padding: 0.85rem 1rem;
+    background: #f8f9fb;
+    border-bottom: 2px solid #e8ecf1;
+    color: #6b7a99;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.stats-table-modern td {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid #f0f2f5;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #1a1f36;
+}
+
+.stats-table-modern tbody tr:hover {
+    background: #f8f9fb;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+.status-dot.green { background: #22c55e; }
+.status-dot.amber { background: #f59e0b; }
+.status-dot.red { background: #ef4444; }
+
+/* ===========================
+   PRINT STYLES
+   =========================== */
+@media print {
+    .sidebar, .top-header, .report-filters, .btn-generate-pdf { display: none !important; }
+    .reports-wrap { padding: 0 !important; background: #fff; }
+    .main-content { margin: 0 !important; padding: 0 !important; width: 100% !important; }
+    .section-card, .chart-panel, .peo-detail-card, .report-header-card { box-shadow: none; border: 1px solid #ddd; }
+    .peo-summary-grid { grid-template-columns: repeat(3, 1fr); }
+    .chart-row { grid-template-columns: 1fr; }
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 1100px) {
+    .peo-summary-grid { grid-template-columns: repeat(2, 1fr); }
+    .chart-row { grid-template-columns: 1fr; }
+    .peo-detail-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 700px) {
+    .peo-summary-grid { grid-template-columns: 1fr; }
+    .reports-wrap { padding: 1rem; }
+    .report-header-top { flex-direction: column; gap: 1rem; }
+}
