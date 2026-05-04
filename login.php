@@ -44,10 +44,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // 🔑 AUTO CREATE alumni record if missing
             if (!$alumni) {
                 $stmtInsert = $pdo->prepare("
-                    INSERT INTO alumni_students (user_id)
-                    VALUES (?)
+                    INSERT INTO alumni_students (user_id, student_email, student_name)
+                    VALUES (?, ?, ?)
                 ");
-                $stmtInsert->execute([$user['user_id']]);
+                $stmtInsert->execute([$user['user_id'], $user['email'], $user['name']]);
 
                 $alumni_id = $pdo->lastInsertId();
             } else {
