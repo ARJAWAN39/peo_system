@@ -7,11 +7,12 @@ $success = "";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
+    $name     = trim($_POST['name'] ?? '');
     $email    = trim($_POST['email'] ?? '');
     $password = $_POST['password'] ?? '';
     $confirm  = $_POST['confirm_password'] ?? '';
 
-    if ($email === '' || $password === '' || $confirm === '') {
+    if ($name === '' || $email === '' || $password === '' || $confirm === '') {
         $error = "All fields are required.";
     } elseif ($password !== $confirm) {
         $error = "Passwords do not match.";
@@ -26,10 +27,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $hashed = password_hash($password, PASSWORD_DEFAULT);
 
             $stmt = $pdo->prepare("
-                INSERT INTO users (email, password, role)
-                VALUES (?, ?, 'alumni')
+                INSERT INTO users (name, email, password, role)
+                VALUES (?, ?, ?, 'alumni')
             ");
-            $stmt->execute([$email, $hashed]);
+            $stmt->execute([$name, $email, $hashed]);
 
             $success = "Account created successfully.";
         }
@@ -257,6 +258,15 @@ body {
             <?php endif; ?>
 
             <form method="POST">
+
+                <div class="mb-3">
+                    <label class="form-label">Full Name</label>
+                    <input type="text"
+                           name="name"
+                           class="form-control"
+                           placeholder="Enter full name"
+                           required>
+                </div>
 
                 <div class="mb-3">
                     <label class="form-label">Email</label>
