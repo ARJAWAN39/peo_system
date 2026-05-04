@@ -271,16 +271,16 @@ if (isset($_GET['survey_completed'])) {
    NORMAL DASHBOARD MODE
 ========================================================= */
 
-$student_email = $_SESSION['email'];
+$user_id = $_SESSION['user_id'];
 
 /* GET ALUMNI BATCH */
 $stmtBatch = $pdo->prepare("
     SELECT id, batch_year
     FROM alumni_students
-    WHERE student_email = ?
+    WHERE user_id = ?
     LIMIT 1
 ");
-$stmtBatch->execute([$student_email]);
+$stmtBatch->execute([$user_id]);
 $alumni = $stmtBatch->fetch(PDO::FETCH_ASSOC);
 
 if (!$alumni) {
